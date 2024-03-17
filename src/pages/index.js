@@ -3,10 +3,24 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import { GiMoebiusTriangle } from "react-icons/gi";
 import { CgMouse } from "react-icons/cg";
+import { FaGithub } from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+
+
 
 export default function Home() {
+  const [fixedImgSrc, setFixedImgSrc] = useState("");
+  const [showFixedImg, setShowFixedImg] = useState(false);
+
+  const handleMouseEnter = (imgSrc) => {
+    setFixedImgSrc(imgSrc);
+    setShowFixedImg(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowFixedImg(false);
+  };
 
   return (
     <>
@@ -22,30 +36,56 @@ export default function Home() {
 
       <Navbar />
       <main className={styles.main}>
+        <div
+          className={styles.fixedimg}
+          style={{
+            display: showFixedImg ? "block" : "none",
+            backgroundImage: fixedImgSrc ? `url(${fixedImgSrc})` : "none",
+          }}
+          onMouseEnter={() => setShowFixedImg(true)}
+          onMouseLeave={handleMouseLeave}
+        ></div>
 
         <div className={styles.page1}>
           <h2>
             Innovation <br />is <span>Intrinsic</span>
           </h2>
-          <div className={styles.follow}>Follow Us - <span className={styles.insta}><Link href='#'>Instagram</Link></span> | <span className={styles.ghub}><Link href='#'>Github</Link></span></div>
+          <div className={styles.follow}>
+            Follow Us - <span className={styles.insta}><Link href='#'>Instagram</Link></span> |{" "}
+            <span className={styles.ghub}><Link href='#'>Github</Link></span>
+          </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4rem' }}>
             <p style={{ fontSize: '1.2rem', letterSpacing: '0.5px' }}>Get a Quote <span>&#8594;</span></p>
-            <p style={{ fontSize: '1.1rem', letterSpacing: '0.5px' }}>We deliver best problem-solving solutions for our clients and provide the finest finishing <br />products in the present and upcoming future.</p>
+            <p style={{ fontSize: '1.1rem', letterSpacing: '0.5px' }}>
+              We deliver best problem-solving solutions for our clients and provide the finest finishing <br />
+              products in the present and upcoming future.
+            </p>
           </div>
           <CgMouse className={styles.mousebtn} size={32} />
 
-          <div className={styles.tri1}><img src="/tri.png" /></div>
-          <div className={styles.tri2}><img src="/tri.png" /></div>
-          <div className={styles.tri3}><img src="/tri.png" /></div>
+          <div className={styles.tri1}><img src="/tri.png" alt="" /></div>
+          <div className={styles.tri2}><img src="/tri.png" alt="" /></div>
+          <div className={styles.tri3}><img src="/tri.png" alt="" /></div>
         </div>
 
         <div className={styles.page2}>
-
           <div className={styles.box2}>
-            <div style={{ width: '50%' }}><h2>Did You Know ?</h2>
-              <p style={{ width: '70%' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero, minima accusamus vel voluptatum, quod cum nam impedit eos, doloribus nihil repellendus consectetur.</p></div>
+            <div style={{ width: '50%' }}>
+              <h2>Did You Know ?</h2>
+              <p style={{ width: '70%' }}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero, minima accusamus vel voluptatum,
+                quod cum nam impedit eos, doloribus nihil repellendus consectetur.
+              </p>
+            </div>
             <div style={{ marginTop: '5rem' }}>
-              <h3><span className={styles.eight}>8</span><span style={{ fontSize: '5rem', fontWeight: '500', color: 'transparent',WebkitTextStroke:'1px white' }}>+</span> <br /><span style={{ lineHeight: '1rem' }}>Projects Delivered</span></h3>
+              <h3>
+                <span className={styles.eight}>8</span>
+                <span style={{ fontSize: '5rem', fontWeight: '500', color: 'transparent', WebkitTextStroke: '1px white' }}>
+                  +
+                </span>{" "}
+                <br />
+                <span style={{ lineHeight: '1rem' }}>Projects Delivered</span>
+              </h3>
             </div>
             <div className={styles.gola}></div>
           </div>
@@ -54,46 +94,90 @@ export default function Home() {
             <div style={{ width: '30%' }} className={styles.services_help}>
               <h1>What We Can Do </h1>
               <h2>Services we can help you with</h2>
-              <p>Our Services <span >&#8594;</span></p>
+              <p>
+                Our Services <span>&#8594;</span>
+              </p>
             </div>
 
             <div style={{}} className={styles.services_img}>
-              <div className={styles.services_img1}><h1>App <br /> Development</h1></div>
-              <div className={styles.services_img2}><h1>Web <br /> Development</h1></div>
-              <div className={styles.services_img3}><h1>Ui/Ux Design</h1></div>
-              <div className={styles.services_img4}><h1>Technology</h1></div>
+              <div className={styles.services_img1}>
+                <h1>
+                  App <br /> Development
+                </h1>
+              </div>
+              <div className={styles.services_img2}>
+                <h1>
+                  Web <br /> Development
+                </h1>
+              </div>
+              <div className={styles.services_img3}>
+                <h1>Ui/Ux Design</h1>
+              </div>
+              <div className={styles.services_img4}>
+                <h1>Technology</h1>
+              </div>
             </div>
-
           </div>
         </div>
 
         <div className={styles.page3}>
-        <div className={styles.fixedimg}></div>
-        <h2>Our Projects</h2>
-        
+          <h2>Our Projects</h2>
 
-        <div className={styles.elem_container}>
-        <div className={styles.elem}>
-        <div className={styles.overlay}></div>
-          <h1>PROJECT ONE</h1>
-        </div>
-        <div className={styles.elem}>
-        <div className={styles.overlay}></div>
-          <h1>PROJECT TWO</h1>
-        </div>
-        <div className={styles.elem}>
-        <div className={styles.overlay}></div>
-          <h1>PROJECT THREE</h1>
-        </div>
-        <div className={styles.elem}>
-        <div className={styles.overlay}></div>
-          <h1>PROJECT FOUR</h1>
-        </div>
-        </div>
-        
+          <div className={styles.elem_container}>
+            <div
+              className={styles.elem}
+              onMouseEnter={() =>
+                handleMouseEnter(
+                  "https://blog.depositphotos.com/wp-content/uploads/2021/11/20-Best-Website-Designs-from-Awwwards-in-2021-5.jpg.webp"
+                )
+              }
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className={styles.overlay}></div>
+              <h1 style={{display:'flex'}}>PROJECT ONE <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+            </div>
+            <div
+              className={styles.elem}
+              onMouseEnter={() =>
+                handleMouseEnter(
+                  "https://blog.depositphotos.com/wp-content/uploads/2021/11/20-Best-Website-Designs-from-Awwwards-in-2021-1.jpg.webp"
+                )
+              }
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className={styles.overlay}></div>
+              <h1 style={{display:'flex'}}>PROJECT TWO <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+            </div>
+            <div
+              className={styles.elem}
+              onMouseEnter={() =>
+                handleMouseEnter(
+                  "https://www.awwwards.com/awards/gallery/2015/11/be-careful-trends-awwwards-09.png"
+                )
+              }
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className={styles.overlay}></div>
+              <h1 style={{display:'flex'}}>PROJECT THREE <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+            </div>
+            <div
+              className={styles.elem}
+              onMouseEnter={() =>
+                handleMouseEnter(
+                  "https://assets.awwwards.com/awards/sites_of_the_day/2016/06/awwwards-sotd-Designembraced-1.jpg"
+                )
+              }
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className={styles.overlay}></div>
+              <h1 style={{display:'flex'}}>PROJECT FOUR <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+            </div>
+          </div>
 
+          <Link style={{fontSize:'1rem',display:'flex',justifyContent:'flex-end',paddingTop:'2rem',paddingRight:'4rem',fontWeight:'bold',letterSpacing:'1px'}} href="/"> See All Projects<span style={{paddingLeft:'0.5rem'}}> &#8594;</span></Link>
         </div>
 
+        <div className={styles.page4}></div>
       </main>
     </>
   );
