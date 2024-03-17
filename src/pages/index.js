@@ -5,6 +5,15 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { CgMouse } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Pagination,EffectCreative  } from 'swiper/modules';
+import 'swiper/css';
+import "@/styles/Swiper.module.css"
+import 'swiper/css/pagination';
+import 'swiper/css/free-mode';
+import 'swiper/css/effect-creative';
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 
@@ -12,6 +21,10 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 export default function Home() {
   const [fixedImgSrc, setFixedImgSrc] = useState("");
   const [showFixedImg, setShowFixedImg] = useState(false);
+
+  const teamMembers = [
+    { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }
+  ];
 
   const handleMouseEnter = (imgSrc) => {
     setFixedImgSrc(imgSrc);
@@ -134,7 +147,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{display:'flex'}}>PROJECT ONE <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>PROJECT ONE <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
             </div>
             <div
               className={styles.elem}
@@ -146,7 +159,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{display:'flex'}}>PROJECT TWO <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>PROJECT TWO <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
             </div>
             <div
               className={styles.elem}
@@ -158,7 +171,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{display:'flex'}}>PROJECT THREE <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>PROJECT THREE <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
             </div>
             <div
               className={styles.elem}
@@ -170,14 +183,76 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{display:'flex'}}>PROJECT FOUR <span style={{display:'flex',margin:'auto 0',position:'absolute',right:'4rem',top:'2rem',scale:'0.7'}}> <Link href='/'><FaGithub style={{marginRight:'2rem'}}/></Link> <Link href='/'><FaArrowAltCircleRight/></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>PROJECT FOUR <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
             </div>
           </div>
 
-          <Link style={{fontSize:'1rem',display:'flex',justifyContent:'flex-end',paddingTop:'2rem',paddingRight:'4rem',fontWeight:'bold',letterSpacing:'1px'}} href="/"> See All Projects<span style={{paddingLeft:'0.5rem'}}> &#8594;</span></Link>
+          <Link style={{ fontSize: '1rem', display: 'flex', justifyContent: 'flex-end', paddingTop: '2rem', paddingRight: '4rem', fontWeight: 'bold', letterSpacing: '1px' }} href="/"> See All Projects<span style={{ paddingLeft: '0.5rem' }}> &#8594;</span></Link>
         </div>
 
-        <div className={styles.page4}></div>
+        <div className={styles.page4}>
+          <h2>Our Team</h2>
+          <h1>Awesome team <br />members</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem', paddingLeft: '1rem', alignItems: 'center' }}>
+            <Swiper
+              slidesPerView={4}
+              spaceBetween={30}
+              modules={[Pagination]}
+              className="mySwiper"
+
+            >
+              {teamMembers.map((member, index) => (
+                <SwiperSlide key={index}>
+                  <div className={styles.teamcard}>
+                    <img src={member.imageSrc} alt={member.name} />
+                    <div className="flex flex-col text-white" style={{ position: 'absolute', bottom: '0%', left: '0', padding: '0.5rem' }}>
+                      <h3>{member.name}</h3>
+                      <p>{member.role}</p>
+                    </div>
+                    <div className={styles.teamcardicon}>
+                      <IoLogoInstagram size={30} style={{ marginBottom: '0.5rem' }} />
+                      <FaLinkedinIn size={22} style={{ marginBottom: '0.5rem' }} />
+                      <FaGithub size={23} />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+
+        <div className={styles.page5}>
+          <div className={styles.page5gola1}></div>
+          <div className={styles.page5gola2}></div>
+          <div>
+            <h2>Our Blogs</h2>
+            <h1>Explore the recent <br />blog</h1>
+            <Link href='/'>View More Blog  →</Link>
+          </div>
+
+          <img src="/dots.png" alt="" className={styles.dots}/>
+
+          <div style={{ position: 'relative', width: '30vw', height: '30vw', overflow: 'hidden', borderRadius: '10px', backgroundColor: 'black', mixBlendMode: 'difference', transform: 'translateX(-60%)' }}>
+          <img src='https://arino-html.vercel.app/assets/img/blog_details_img_1.jpeg' alt='imagenot found' style={{width:'30vw',opacity:'0.8'}}/>
+                    <div className="flex flex-col text-white" style={{ position: 'absolute', bottom: '0%', left: '0', padding: '0.5rem' }}>
+                      <p style={{fontSize:'0.9rem',color:'#A1A1A1',fontWeight:'500'}}>15 Mar 2024</p>
+                      <h3 style={{fontSize:'1.7rem',color:'white',fontWeight:'bold',lineHeight:'2rem'}}>How to become strong during tough days</h3>
+                    </div>
+          </div>
+          
+
+        </div>
+        
+        <div className={styles.page6}>
+        <div className={styles.hbackground}>
+      <div className={styles.siteheading}>
+        <h2>Inovation is Intrinsic </h2>
+        <h2>Inovation is Intrinsic </h2>
+        <h2>Inovation is Intrinsic </h2>
+      </div>
+      </div>
+        </div>
+
       </main>
     </>
   );

@@ -137,7 +137,7 @@
     width: 20px;
     user-select: none;
     filter: brightness(90%) contrast(130%);
-    top: 20%;
+    top: 3%;
     right: 20%;
     z-index: -1;
     animation: moveX 4s infinite alternate, moveY 8s infinite alternate;
@@ -418,6 +418,232 @@
   max-width: none; 
   margin: 0 auto;
   background-color: #181818;
-  height: 100vh;
+  padding-bottom: 4rem;
 }
 
+.page4 h2{
+  color: rgba(255, 255, 255, 0.51);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+}
+.page4 h1{
+  margin-left: 4rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  letter-spacing: 1px;
+}
+
+.teamcard {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.teamcard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all ease-in-out 0.5s;
+}
+
+.teamcard:hover img {
+  transform: scale(1.05);
+}
+
+.teamcard h3{
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+.teamcard p{
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.474);
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.teamcardicon{
+  display:flex;
+  flex-direction:column;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0px;
+  transform: scale(0);
+  align-items: center;
+  right: 0px;
+  transition: all ease 0.5s;
+}
+
+.teamcard:hover .teamcardicon{
+  transform: scale(1);
+}
+
+/* --------  */
+
+/* Page 5  ----------------- */
+
+.page5 {
+  display: flex;
+  padding-top: 8rem;
+  width: 100vw; 
+  min-width: 1250px; 
+  max-width: none; 
+  margin: 0 auto;
+  background-color: #181818;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.page5gola1{
+  width: 10vw;
+  height: 10vw;
+  background-color: #ff4917;
+  border-radius: 100%;
+  position: absolute;
+  left: -5%;
+  transform: translateY(80%);
+  filter: blur(100px);
+  mix-blend-mode: difference;
+}
+.page5gola2{
+  width: 25vw;
+  height: 25vw;
+  background:linear-gradient(to top left,#ff491748,#dc36087b);
+  border-radius: 100%;
+  position: absolute;
+  left: 5%;
+  transform: translateY(70%);
+  filter: blur(40px);
+  opacity: 0.7;
+  mix-blend-mode: difference;
+  animation-name:gooey ;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes gooey {
+  from{
+    transform: translate(10%,-10%) skew(0);
+  }
+  to{
+    transform: translate(-10%,20%) skew(10deg);
+  }
+}
+
+.page5 h2{
+  position: relative;
+  color: rgba(255, 255, 255, 0.51);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+}
+.page5 h1{
+  position: relative;
+  margin-left: 4rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.page5 a{
+  position: relative;
+  margin-left: 4rem;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 3.2rem;
+  letter-spacing: 1px;
+}
+
+.dots{
+  width: 15vw;
+  height: 15vw;
+  /* mix-blend-mode: difference; */
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  right: -4%;
+  animation-name:dots ;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes dots {
+  from{
+    transform: translateY(50%) scale(0.9);
+  }
+  to{
+    transform: translateY(-80%);
+  }
+  
+}
+
+
+/* --------  */
+
+/* Page 6  ----------------- */
+
+.page6{
+  padding-top: 5rem;
+  width: 100vw; 
+  min-width: 1250px; 
+  max-width: none; 
+  margin: 0 auto;
+  background-color: #181818;
+  padding-bottom: 6rem;
+}
+
+.siteheading{
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.siteheading::-webkit-scrollbar{
+  display: none;
+}
+.hbackground{
+  height: 9.1rem;
+  background-color: transparent;
+}
+.siteheading h2 {
+  padding-right: 2.5vw;
+  padding-left: 2.5vw;
+  text-align: center;
+  display: inline-block;
+  font-size: 6rem;
+  font-weight: bold;
+  color: transparent;
+  letter-spacing: 4px;
+  -webkit-text-stroke: 2px #ff4917;
+  background-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
+  animation-name: hmove;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hmove {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+  
+}

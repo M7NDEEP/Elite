@@ -3,6 +3,7 @@ import Lenis from '@studio-freight/lenis'
 import { useEffect } from "react";
 import gsap from 'gsap';
 import Cursor from "./Cursor";
+import Footer from "@/components/Footer";
 
 export default function App({ Component, pageProps }) {
 
@@ -21,5 +22,6 @@ export default function App({ Component, pageProps }) {
   return <>
   <Cursor/>
     <Component {...pageProps} />
+    <Footer/>
   </>;
 }
