@@ -3,12 +3,12 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-        <footer style={{backgroundColor:'#181818'}}>
+        <footer style={{backgroundColor:'#000000',overflow:'hidden'}}>
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
         <div style={{fontWeight:'bold',fontSize:'2.2rem',letterSpacing:'0.5px'}}>
                 <span style={{fontSize:'1.4rem',fontWeight:'bold',letterSpacing:'0.5px'}}><i>Abhudaya</i></span>
-                <span style={{color:'#FF4A17',fontWeight:'bold',fontSize:'2.2rem'}}>E</span>lite
+                <span style={{color:'#9D00FF',fontWeight:'bold',fontSize:'2.2rem'}}>E</span>lite
             </div>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>

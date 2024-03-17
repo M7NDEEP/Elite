@@ -1,7 +1,7 @@
 
 .main {
     width: 100%;
-    --primary-color: #FF4A17;
+    --primary-color: #9d00ff;
     position: relative;
     z-index: 2;
 }
@@ -9,7 +9,8 @@
 .box1 {
     width: 100%;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
+    /* background-color: #5b2f76; */
+    background-color: black;
     z-index: -1;
     position: fixed;
 }
@@ -18,8 +19,9 @@
 .box1 img {
     width: 100%;
     height: 100%;
+    /* mix-blend-mode:multiply; */
     object-fit: cover;
-    filter: brightness(120%);
+    filter:saturate(90%) contrast(120%) brightness(35%);
 }
 
 .cursor {
@@ -28,29 +30,29 @@
     left: -5px;
     width: 10px;
     height: 10px;
-    background-color:#FF4A17;
+    background-color:#9d00ff;
     border-radius: 50%;
     pointer-events: none;
     z-index: 999;
-    mix-blend-mode: difference;
+    mix-blend-mode:lighten;
   }
   
 .cursorborder {
     --size: 40px;
     position: fixed;
-    background-color: #ff49170b;
+    background-color: #100218;
     top: calc(var(--size) / -2);
     left: calc(var(--size) / -2);
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
     /* filter: blur(20px); */
-    box-shadow: 0 0 0 1px #ff4917;
+    box-shadow: 0 0 0 1px #9d00ff;
     pointer-events: none;
-    mix-blend-mode: difference;
+    mix-blend-mode:lighten;
     transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
       height 0.15s ease-out, background-color 0.15s ease-out;
-    z-index: 999;
+    z-index: 998;
   }
 
 /* --------  */
@@ -68,6 +70,7 @@
 
 .page1 h2 {
     font-size: 7rem;
+    text-shadow: 3px 2px 1px #9d00ff4d;
     line-height: 7rem;
     font-weight: bold;
     letter-spacing: 3px;
@@ -163,7 +166,7 @@
     min-width: 1250px; 
     max-width: none; 
     margin: 0 auto;
-    background-color: #181818;
+    background-color: #000000;
     padding-bottom: 10rem;
     /* height: 100vh; */
 }
@@ -173,7 +176,7 @@
     margin: 0 auto;
     width: 80%;
     display: flex;
-    background-color: #0F0F0F;
+    background-color: #0b0a0a;
     transform: translateY(-40%);
     justify-content:space-evenly;
     align-items: center;
@@ -206,7 +209,7 @@
   letter-spacing: 1px;
 }
 .gola{
-  background-color: #ffffff1c;
+  background-color: #9d00ff19;
   width: 20rem;
   right: 0px;
   z-index: -1;
@@ -225,7 +228,7 @@
 .services_help h1{
   margin-left: 2rem;
  font-size: 1.4rem;
- color: rgba(255, 255, 255, 0.461);
+ color: #9D00FF;
  font-weight: bold;
  letter-spacing: 0.5px;
 }
@@ -258,7 +261,7 @@
   border-radius: 10px;
   overflow: hidden;
   transform: translateY(100%);
-  background-color: rgba(0, 0, 0, 0.337);
+  background-color: #0b0a0a;
   filter: blur(50%);
   transition: all 0.2s ease-in-out;
 }
@@ -279,7 +282,7 @@
   border-radius: 10px;
   overflow: hidden;
   /* transform: translateY(100%); */
-  background-color: rgba(0, 0, 0, 0.337);
+  background-color: #0b0a0a;
   filter: blur(50%);
   transition: all 0.2s ease-in-out;
 }
@@ -301,7 +304,7 @@
   border-radius: 10px;
   overflow: hidden;
   transform: translateY(100%);
-  background-color: rgba(0, 0, 0, 0.337);
+  background-color: #0b0a0a;
   filter: blur(50%);
   transition: all 0.2s ease-in-out;
 }
@@ -323,7 +326,7 @@
   border-radius: 10px;
   overflow: hidden;
   /* transform: translateY(100%); */
-  background-color: rgba(0, 0, 0, 0.337);
+  background-color: #0b0a0a;
   filter: blur(50%);
   transition: all 0.2s ease-in-out;
 }
@@ -336,7 +339,8 @@
 }
 
 .services_img1:hover,.services_img2:hover,.services_img3:hover,.services_img4:hover {
-  box-shadow: 0 0 50px #ff49177e;
+  box-shadow: 0 0 50px #9d00ff67;
+  ;
 }
 
 
@@ -350,7 +354,7 @@
   min-width: 1250px; 
   max-width: none; 
   margin: 0 auto;
-  background-color: #181818;
+  background-color: #000000;
   /* height: 100vh; */
 }
 
@@ -358,7 +362,7 @@
   font-size: 1.4rem;
   font-weight: 500;
   text-align: center;
-  color: rgba(255, 255, 255, 0.591);
+  color: #9D00FF;
   margin-bottom: 2rem;
 }
 
@@ -374,8 +378,8 @@
 }
 .elem h1{
   font-size: 2.2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
   z-index: 9;
 }
 .overlay{
@@ -383,7 +387,7 @@
   height: 100%;
   width: 100%;
   top: -100%;
-  background-color: #ff49177d;
+  background-color: #9d00ff3d;
   position: absolute;
   transition: all ease 0.3s;
 }
@@ -397,7 +401,7 @@
   height: 20vw;
   position: fixed;
   top: 30%;
-  right: 20%;
+  right: 10%;
   z-index: 99;
   display: none;
   background-color: transparent;
@@ -417,16 +421,16 @@
   min-width: 1250px; 
   max-width: none; 
   margin: 0 auto;
-  background-color: #181818;
+  background-color: #000000;
   padding-bottom: 4rem;
 }
 
 .page4 h2{
-  color: rgba(255, 255, 255, 0.51);
+  color: #9D00FF;
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   margin-left: 4rem;
 }
 .page4 h1{
@@ -443,6 +447,7 @@
   width: 20vw;
   height: 20vw;
   border-radius: 10px;
+  border: 1px solid #9d00ff11;
   overflow: hidden;
 }
 
@@ -464,7 +469,6 @@
 }
 .teamcard p{
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.474);
   letter-spacing: 0.5px;
   font-weight: 500;
 }
@@ -496,7 +500,7 @@
   min-width: 1250px; 
   max-width: none; 
   margin: 0 auto;
-  background-color: #181818;
+  background-color: #000000;
   justify-content: space-between;
   padding-bottom: 2rem;
 }
@@ -504,7 +508,7 @@
 .page5gola1{
   width: 10vw;
   height: 10vw;
-  background-color: #ff4917;
+  background-color: #9d00ff9e;
   border-radius: 100%;
   position: absolute;
   left: -5%;
@@ -515,7 +519,7 @@
 .page5gola2{
   width: 25vw;
   height: 25vw;
-  background:linear-gradient(to top left,#ff491748,#dc36087b);
+  background:linear-gradient(to top left,#28043f,#9d00ff58);
   border-radius: 100%;
   position: absolute;
   left: 5%;
@@ -541,7 +545,7 @@
 
 .page5 h2{
   position: relative;
-  color: rgba(255, 255, 255, 0.51);
+  color: #9D00FF;
   font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -603,7 +607,7 @@
   min-width: 1250px; 
   max-width: none; 
   margin: 0 auto;
-  background-color: #181818;
+  background-color: #000000;
   padding-bottom: 6rem;
 }
 
@@ -627,7 +631,7 @@
   font-weight: bold;
   color: transparent;
   letter-spacing: 4px;
-  -webkit-text-stroke: 2px #ff4917;
+  -webkit-text-stroke: 2px #9D00FF;
   background-color: transparent;
   overflow: hidden;
   white-space: nowrap;

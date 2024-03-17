@@ -44,7 +44,7 @@ export default function Home() {
       </Head>
 
       <div className={styles.box1}>
-        <img src="https://arino-html.vercel.app/assets/img/hero_bg.jpeg" alt="" />
+        <img src="/bg5.jpg" alt="" />
       </div>
 
       <Navbar />
@@ -147,7 +147,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{ display: 'flex' }}>PROJECT ONE <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>We seek diverse perspective</h1>
             </div>
             <div
               className={styles.elem}
@@ -159,7 +159,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{ display: 'flex' }}>PROJECT TWO <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>The Grids</h1>
             </div>
             <div
               className={styles.elem}
@@ -171,7 +171,7 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{ display: 'flex' }}>PROJECT THREE <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>Spothecary</h1>
             </div>
             <div
               className={styles.elem}
@@ -183,11 +183,11 @@ export default function Home() {
               onMouseLeave={handleMouseLeave}
             >
               <div className={styles.overlay}></div>
-              <h1 style={{ display: 'flex' }}>PROJECT FOUR <span style={{ display: 'flex', margin: 'auto 0', position: 'absolute', right: '4rem', top: '2rem', scale: '0.7' }}> <Link href='/'><FaGithub style={{ marginRight: '2rem' }} /></Link> <Link href='/'><FaArrowAltCircleRight /></Link></span></h1>
+              <h1 style={{ display: 'flex' }}>Creative : The Art Director</h1>
             </div>
           </div>
 
-          <Link style={{ fontSize: '1rem', display: 'flex', justifyContent: 'flex-end', paddingTop: '2rem', paddingRight: '4rem', fontWeight: 'bold', letterSpacing: '1px' }} href="/"> See All Projects<span style={{ paddingLeft: '0.5rem' }}> &#8594;</span></Link>
+          <Link style={{ fontSize: '1rem',color:'#9D00FF', display: 'flex', justifyContent: 'flex-end', paddingTop: '2rem', paddingRight: '4rem', fontWeight: '500', letterSpacing: '1px' }} href="/"> See All Projects<span style={{ paddingLeft: '0.5rem',color:'#9D00FF' }}> &#8594;</span></Link>
         </div>
 
         <div className={styles.page4}>

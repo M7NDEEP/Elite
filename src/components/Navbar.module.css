@@ -1,5 +1,5 @@
 .navbar {
-    --primary-color: #FF4A17;
+    --primary-color: #c45fff;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -50,5 +50,3 @@
     transform: translateY(-100%);
     transition: transform 0.3s ease;
 }
-
-
