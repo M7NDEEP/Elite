@@ -358,6 +358,20 @@
   /* height: 100vh; */
 }
 
+.page3gola{
+  width: 50vw;
+  height: 50vw;
+  background-color: #360b5160;
+  position: absolute;
+  border-radius: 100%;
+  /* display: none; */
+  right: -30%;
+  transform: translateY(20%);
+  filter: blur(100px);
+  mix-blend-mode: difference;
+  z-index: 0;
+}
+
 .page3 h2{
   font-size: 1.4rem;
   font-weight: 500;

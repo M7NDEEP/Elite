@@ -134,6 +134,7 @@ export default function Home() {
         </div>
 
         <div className={styles.page3}>
+        <div className={styles.page3gola}></div>
           <h2>Our Projects</h2>
 
           <div className={styles.elem_container}>
@@ -187,7 +188,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Link style={{ fontSize: '1rem',color:'#9D00FF', display: 'flex', justifyContent: 'flex-end', paddingTop: '2rem', paddingRight: '4rem', fontWeight: '500', letterSpacing: '1px' }} href="/"> See All Projects<span style={{ paddingLeft: '0.5rem',color:'#9D00FF' }}> &#8594;</span></Link>
+          <Link style={{ fontSize: '1rem',color:'white', display: 'flex', justifyContent: 'flex-end', paddingTop: '2rem', paddingRight: '4rem', fontWeight: '500', letterSpacing: '1px' }} href="/"> See All Projects<span style={{ paddingLeft: '0.5rem',color:'white' }}> &#8594;</span></Link>
         </div>
 
         <div className={styles.page4}>
