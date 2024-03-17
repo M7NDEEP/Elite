@@ -33,18 +33,66 @@ export default function Home() {
             <p style={{ fontSize: '1.1rem', letterSpacing: '0.5px' }}>We deliver best problem-solving solutions for our clients and provide the finest finishing <br />products in the present and upcoming future.</p>
           </div>
           <CgMouse className={styles.mousebtn} size={32} />
-          
-        <div className={styles.tri1}><img src="/tri.png" /></div>
-        <div className={styles.tri2}><img src="/tri.png" /></div>
-        <div className={styles.tri3}><img src="/tri.png" /></div>
+
+          <div className={styles.tri1}><img src="/tri.png" /></div>
+          <div className={styles.tri2}><img src="/tri.png" /></div>
+          <div className={styles.tri3}><img src="/tri.png" /></div>
         </div>
 
         <div className={styles.page2}>
+
           <div className={styles.box2}>
-          <img src="" alt="" />
+            <div style={{ width: '50%' }}><h2>Did You Know ?</h2>
+              <p style={{ width: '70%' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero, minima accusamus vel voluptatum, quod cum nam impedit eos, doloribus nihil repellendus consectetur.</p></div>
+            <div style={{ marginTop: '5rem' }}>
+              <h3><span className={styles.eight}>8</span><span style={{ fontSize: '5rem', fontWeight: '500', color: 'transparent',WebkitTextStroke:'1px white' }}>+</span> <br /><span style={{ lineHeight: '1rem' }}>Projects Delivered</span></h3>
+            </div>
+            <div className={styles.gola}></div>
+          </div>
+
+          <div className={styles.services}>
+            <div style={{ width: '30%' }} className={styles.services_help}>
+              <h1>What We Can Do </h1>
+              <h2>Services we can help you with</h2>
+              <p>Our Services <span >&#8594;</span></p>
+            </div>
+
+            <div style={{}} className={styles.services_img}>
+              <div className={styles.services_img1}><h1>App <br /> Development</h1></div>
+              <div className={styles.services_img2}><h1>Web <br /> Development</h1></div>
+              <div className={styles.services_img3}><h1>Ui/Ux Design</h1></div>
+              <div className={styles.services_img4}><h1>Technology</h1></div>
+            </div>
+
           </div>
         </div>
 
+        <div className={styles.page3}>
+        <div className={styles.fixedimg}></div>
+        <h2>Our Projects</h2>
+        
+
+        <div className={styles.elem_container}>
+        <div className={styles.elem}>
+        <div className={styles.overlay}></div>
+          <h1>PROJECT ONE</h1>
+        </div>
+        <div className={styles.elem}>
+        <div className={styles.overlay}></div>
+          <h1>PROJECT TWO</h1>
+        </div>
+        <div className={styles.elem}>
+        <div className={styles.overlay}></div>
+          <h1>PROJECT THREE</h1>
+        </div>
+        <div className={styles.elem}>
+        <div className={styles.overlay}></div>
+          <h1>PROJECT FOUR</h1>
+        </div>
+        </div>
+        
+
+        </div>
 
       </main>
     </>
