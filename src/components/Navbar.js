@@ -32,11 +32,11 @@ const Navbar = () => {
             </div>
             <ul>
                 <li><Link href='/'>HOME</Link></li>
-                <li><Link href='/'>ABOUT</Link></li>
-                <li><Link href='/'>TEAM</Link></li>
-                <li><Link href='/'>EVENTS</Link></li>
-                <li><Link href='/'>PROJECTS</Link></li>
-                <li><Link href='/'>BLOG</Link></li>
+                <li><Link href='/about'>ABOUT</Link></li>
+                <li><Link href='teams'>TEAM</Link></li>
+                <li><Link href='/events'>EVENTS</Link></li>
+                <li><Link href='/projects'>PROJECTS</Link></li>
+                <li><Link href='/blog'>BLOG</Link></li>
             </ul>
             <div className={styles.contact}>
                 <VscListSelection size={25}/>

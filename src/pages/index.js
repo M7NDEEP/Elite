@@ -192,7 +192,7 @@ export default function Home() {
         </div>
 
         <div className={styles.page4}>
-          <h2>Our Team</h2>
+          <h2 id="teamhash">Our Team</h2>
           <h1>Awesome team <br />members</h1>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem', paddingLeft: '1rem', alignItems: 'center' }}>
             <Swiper
