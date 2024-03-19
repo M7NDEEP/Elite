@@ -43,11 +43,97 @@
     max-width: none; 
     margin: 0 auto;
     background-color: #000000;
-    height: 100vh;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* padding-top: 5rem; */
-    /* padding-bottom: 5rem; */
-    /* overflow: hidden; */
+    margin: 5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+.page2 img{
+    border-radius: 20px;
+    width: 30rem;
+    border: 1px solid #9d00ff13;
+    height: 18rem;
+    filter: brightness(90%) saturate(120%) contrast(90%); 
+}
+.upcomingC{
+    width: 40%;
+    margin-left: 2rem;
+}
+.upcomingC h1{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+}
+.upcomingC p{
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+.upcomingC h2{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+
+/* --------  */
+
+/* Page 3  ----------------- */
+
+.page3 {
+    width: 100vw; 
+    min-width: 1250px; 
+    max-width: none; 
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+    background-color: #000000;
+    margin: 5rem 0rem;
+}
+.page3 h3{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-left: 2rem;
+}
+
+.page3 img{
+    border-radius: 20px;
+    width: 18rem;
+    border: 1px solid #9d00ff13;
+    height: 12rem;
+    filter: brightness(90%) saturate(120%) contrast(90%); 
+}
+
+.pastC{
+    width: 40%;
+    margin-left: 2rem;
+}
+.pastC h1{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+}
+.pastC p{
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+.pastC h2{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-weight: 500;
 }

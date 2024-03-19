@@ -27,7 +27,7 @@ const Navbar = () => {
     return (
         <div className={`${styles.navbar} ${visible ? styles.visible : styles.hidden}`}>
             <div className={styles.logo}>
-                <span style={{fontSize:'1.4rem'}}><i>Abhudaya</i></span>
+                <span style={{fontSize:'1.4rem'}}><i>Abhyudaya</i></span>
                 <span style={{color:'#9d00ff'}}>E</span>lite
             </div>
             <ul>

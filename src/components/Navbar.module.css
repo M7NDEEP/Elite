@@ -1,6 +1,7 @@
 .navbar {
     --primary-color: #c45fff;
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem 0rem;
