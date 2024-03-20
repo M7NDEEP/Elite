@@ -63,6 +63,9 @@ export default function Home() {
           <h2>
             Innovation <br />is <span>Intrinsic</span>
           </h2>
+          {/* <h2>
+          Coding Excellence <br />Takes <span>Flight</span>
+          </h2> */}
           <div className={styles.follow}>
             Follow Us - <span className={styles.insta}><Link href='#'>Instagram</Link></span> |{" "}
             <span className={styles.ghub}><Link href='#'>Github</Link></span>

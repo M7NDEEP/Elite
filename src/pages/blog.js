@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from "next/head";
-import styles from "@/styles/Events.module.css";
+import styles from "@/styles/Blog.module.css";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
@@ -13,6 +13,14 @@ const blog = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
+      <main>
+      <div className={styles.page1}>
+          <div className={styles.box1}></div>
+          <h1>Our <span style={{ WebkitTextStroke: '2px white', color: 'transparent', letterSpacing: '1px' }}>Blogs</span></h1>
+        </div>
+
+        <h2 className={styles.h2}>Blog are coming soon ...</h2>
+      </main>
     </>
   )
 }

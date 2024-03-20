@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from "next/head";
-import styles from "@/styles/Events.module.css";
+import styles from "@/styles/About.module.css";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
@@ -13,6 +13,15 @@ const about = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
+      <main>
+      <div className={styles.page1}>
+          <div className={styles.box1}></div>
+          <h1>About <span style={{ WebkitTextStroke: '2px white', color: 'transparent', letterSpacing: '1px' }}>Us</span></h1>
+        </div>
+        <div>
+          <h2 className={styles.h2}>Lorem dolor sit amet consectetur, adipisicing elit. Ipsa aperiam assumenda voluptas consequatur molestiae aspernatur sint vero deleniti possimus, rerum sunt error impedit amet fugit voluptatibus obcaecati voluptates quia cumque veniam dicta ipsam nihil! Non adipisci esse ab rem veniam? Veniam enim totam inventore vel, mollitia ad voluptatem illo! Non, sint voluptatem voluptatibus ut architecto voluptate, inventore amet, illo ipsam ea cumque!</h2>
+        </div>
+      </main>
     </>
   )
 }
