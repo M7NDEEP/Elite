@@ -1,10 +1,17 @@
 import React from 'react'
 import Head from "next/head";
-import styles from "@/styles/Events.module.css";
+import styles from "@/styles/Team.module.css";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import { CgMouse } from "react-icons/cg";
+import { FaGithub } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const teams = () => {
+  const teamMembers = [
+    { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }, { name: "Melina Opole", role: "Web Developer", imageSrc: "https://arino-html.vercel.app/assets/img/member_4.jpeg" }
+  ];
   return (
     <>
       <Head>
@@ -14,7 +21,26 @@ const teams = () => {
       </Head>
       <Navbar />
       <main>
-        
+        <div className={styles.page1}>
+          <div className={styles.box1}></div>
+          <h1>Our <span style={{ WebkitTextStroke: '2px white', color: 'transparent', letterSpacing: '1px' }}>Team</span></h1>
+        </div>
+        <div className={styles.teamdiv}>
+          {teamMembers.map((member, index) => (
+            <div className={styles.teamcard}>
+              <img src={member.imageSrc} alt={member.name} />
+              <div className="flex flex-col text-white" style={{ position: 'absolute', bottom: '0%', left: '0', padding: '0.5rem' }}>
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
+              </div>
+              <div className={styles.teamcardicon}>
+                <IoLogoInstagram size={30} style={{ marginBottom: '0.5rem' }} />
+                <FaLinkedinIn size={22} style={{ marginBottom: '0.5rem' }} />
+                <FaGithub size={23} />
+              </div>
+            </div>
+          ))}
+        </div>
       </main>
     </>
   )

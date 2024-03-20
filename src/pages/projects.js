@@ -1,10 +1,20 @@
-import React from 'react'
+import React from 'react';
 import Head from "next/head";
-import styles from "@/styles/Events.module.css";
+import styles from "@/styles/Projects.module.css";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
-const projects = () => {
+const Projects = () => {
+  const projects = [
+    {
+      title:'Project 1',
+      description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia cum saepe excepturi neque enim assumenda ipsa consectetur autem sequi. Atque neque consectetur non magnam quibusdam minus. Veritatis enim quos necessitatibus cupiditate, aspernatur ea.',
+      image:'https://blog.depositphotos.com/wp-content/uploads/2021/11/20-Best-Website-Designs-from-Awwwards-in-2021-5.jpg.webp',
+      link:'',
+      github:'https://github.com/M7NDEEP/'
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -13,8 +23,27 @@ const projects = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
-    </>
-  )
-}
+      <main>
+        <div className={styles.page1}>
+          <div className={styles.box1}></div>
+          <h1>Our <span style={{ WebkitTextStroke: '2px white', color: 'transparent', letterSpacing: '1px' }}>Projects</span></h1>
+        </div>
 
-export default projects
+        <div className={styles.page2}>
+          {projects.map((project, index) => (
+            <div key={index} className={styles.projectcard}>
+              <img src={project.image} alt="projectimg"/>
+              <div className={styles.projectdtl}>
+                <Link href={project.link}><h1>{project.title}</h1></Link>
+                <p>{project.description}</p>
+                <Link className={styles.git} href={project.github}>GITHUB</Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </>
+  );
+};
+
+export default Projects;
