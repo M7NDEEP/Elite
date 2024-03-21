@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import gsap from 'gsap';
 import Cursor from "./Cursor";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 export default function App({ Component, pageProps }) {
 
@@ -15,13 +16,13 @@ export default function App({ Component, pageProps }) {
     }
     requestAnimationFrame(raf);
   }, []);
-  
+
   useEffect(() => {
   }, []);
 
   return <>
-  <Cursor/>
+    <Cursor />
     <Component {...pageProps} />
-    <Footer/>
+    <Footer />
   </>;
 }

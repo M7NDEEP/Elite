@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import styles from "@/components/Navbar.module.css";
 import Link from 'next/link';
 import { VscListSelection } from "react-icons/vsc";
+import Contact from './Contact';
 
 
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
+    const [showContact, setShowContact] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -38,9 +40,11 @@ const Navbar = () => {
                 <li><Link href='/projects'>PROJECTS</Link></li>
                 <li><Link href='/blog'>BLOG</Link></li>
             </ul>
-            <div className={styles.contact}>
+            <div className={styles.contact} onClick={() => setShowContact(true)}>
                 <VscListSelection size={25}/>
             </div>
+            {showContact && <Contact onClose={() => setShowContact(false)} />} 
+
         </div>
     );
 }
