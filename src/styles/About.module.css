@@ -42,3 +42,35 @@
     text-align: center;
     font-size: 1.2rem;
 }
+
+@media (min-width: 350px) and (max-width: 400px) {
+    .page1 {
+        min-width: 350px; 
+    }
+    .h2{
+        font-size: 0.9rem;
+        width: 90%;
+    }
+    .box1{
+        width: 10rem;
+        height: 10rem;
+        filter: blur(70px);
+        background-color: blueviolet;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .page1 {
+        min-width: 400px; 
+    }
+    .h2{
+        font-size: 0.9rem;
+        width: 90%;
+    }
+    .box1{
+        width: 10rem;
+        height: 10rem;
+        filter: blur(70px);
+        background-color: blueviolet;
+    }
+}

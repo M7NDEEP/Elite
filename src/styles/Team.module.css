@@ -88,3 +88,34 @@
   .teamcard:hover .teamcardicon{
     transform: scale(1);
   }
+
+  @media (min-width: 350px) and (max-width: 400px) {
+    .page1{
+      min-width: 350px;
+    }
+    .teamdiv{
+      flex-direction: column;
+      margin-top: 1rem;
+  }
+  .teamcard {
+      width: 80vw;
+      height: 80vw;
+      border: 1px solid rgba(137, 43, 226, 0.727);
+      padding: 2px;
+    }
+  }
+  @media (min-width: 400px) and (max-width: 500px) {
+    .page1{
+      min-width: 400px;
+    }
+    .teamdiv{
+      flex-direction: column;
+      margin-top: 1rem;
+  }
+  .teamcard {
+      width: 80vw;
+      height: 80vw;
+      border: 1px solid rgba(137, 43, 226, 0.727);
+      padding: 2px;
+    }
+  }
