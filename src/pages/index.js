@@ -8,7 +8,8 @@ import { FaGithub } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination,EffectCreative  } from 'swiper/modules';
+import { FreeMode, Pagination, EffectCreative } from 'swiper/modules';
+import { motion } from 'framer-motion';
 import 'swiper/css';
 import "@/styles/Swiper.module.css"
 import 'swiper/css/pagination';
@@ -60,17 +61,16 @@ export default function Home() {
         ></div>
 
         <div className={styles.page1}>
-          <h2>
+          <h2
+          >
             Innovation <br />is <span>Intrinsic</span>
           </h2>
-          {/* <h2>
-          Coding Excellence <br />Takes <span>Flight</span>
-          </h2> */}
           <div className={styles.follow}>
             Follow Us - <span className={styles.insta}><Link href='#'>Instagram</Link></span> |{" "}
             <span className={styles.ghub}><Link href='#'>Github</Link></span>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '4rem' }}>
+
+          <div className={styles.getquote}>
             <p style={{ fontSize: '1.2rem', letterSpacing: '0.5px' }}>Get a Quote <span>&#8594;</span></p>
             <p style={{ fontSize: '1.1rem', letterSpacing: '0.5px' }}>
               We deliver best problem-solving solutions for our clients and provide the finest finishing <br />
@@ -86,9 +86,9 @@ export default function Home() {
 
         <div className={styles.page2}>
           <div className={styles.box2}>
-            <div style={{ width: '50%' }}>
+            <div className={styles.box2div}>
               <h2>Did You Know ?</h2>
-              <p style={{ width: '70%' }}>
+              <p className={styles.box2divp}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero, minima accusamus vel voluptatum,
                 quod cum nam impedit eos, doloribus nihil repellendus consectetur.
               </p>
@@ -107,7 +107,7 @@ export default function Home() {
           </div>
 
           <div className={styles.services}>
-            <div style={{ width: '30%' }} className={styles.services_help}>
+            <div className={styles.services_help}>
               <h1>What We Can Do </h1>
               <h2>Services we can help you with</h2>
               <p>
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
 
         <div className={styles.page3}>
-        <div className={styles.page3gola}></div>
+          <div className={styles.page3gola}></div>
           <h2>Our Projects</h2>
 
           <div className={styles.elem_container}>
@@ -191,7 +191,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Link style={{ fontSize: '1rem',color:'white', display: 'flex', justifyContent: 'flex-end', paddingTop: '2rem', paddingRight: '4rem', fontWeight: '500', letterSpacing: '1px' }} href="/"> See All Projects<span style={{ paddingLeft: '0.5rem',color:'white' }}> &#8594;</span></Link>
+          <Link style={{ fontSize: '1rem', color: 'white', display: 'flex', justifyContent: 'flex-end', paddingTop: '2rem', paddingRight: '4rem', fontWeight: '500', letterSpacing: '1px' }} href="/"> See All Projects<span style={{ paddingLeft: '0.5rem', color: 'white' }}> &#8594;</span></Link>
         </div>
 
         <div className={styles.page4}>
@@ -234,28 +234,28 @@ export default function Home() {
             <Link href='/'>View More Blog  →</Link>
           </div>
 
-          <img src="/dots.png" alt="" className={styles.dots}/>
+          <img src="/dots.png" alt="" className={styles.dots} />
 
           <div style={{ position: 'relative', width: '30vw', height: '30vw', overflow: 'hidden', borderRadius: '10px', backgroundColor: 'black', mixBlendMode: 'difference', transform: 'translateX(-60%)' }}>
-          <img src='https://arino-html.vercel.app/assets/img/blog_details_img_1.jpeg' alt='imagenot found' style={{width:'30vw',opacity:'0.8'}}/>
-                    <div className="flex flex-col text-white" style={{ position: 'absolute', bottom: '0%', left: '0', padding: '0.5rem' }}>
-                      <p style={{fontSize:'0.9rem',color:'#A1A1A1',fontWeight:'500'}}>15 Mar 2024</p>
-                      <h3 style={{fontSize:'1.7rem',color:'white',fontWeight:'bold',lineHeight:'2rem'}}>How to become strong during tough days</h3>
-                    </div>
+            <img src='https://arino-html.vercel.app/assets/img/blog_details_img_1.jpeg' alt='imagenot found' style={{ width: '30vw', opacity: '0.8' }} />
+            <div className="flex flex-col text-white" style={{ position: 'absolute', bottom: '0%', left: '0', padding: '0.5rem' }}>
+              <p style={{ fontSize: '0.9rem', color: '#A1A1A1', fontWeight: '500' }}>15 Mar 2024</p>
+              <h3 style={{ fontSize: '1.7rem', color: 'white', fontWeight: 'bold', lineHeight: '2rem' }}>How to become strong during tough days</h3>
+            </div>
           </div>
-          
+
 
         </div>
-        
+
         <div className={styles.page6}>
-        <div className={styles.hbackground}>
-      <div className={styles.siteheading}>
-        <h2>Inovation is Intrinsic </h2>
-        <h2>Inovation is Intrinsic </h2>
-        <h2>Inovation is Intrinsic </h2>
-      </div>
-      </div>
-        </div>
+          <div className={styles.hbackground}>
+            <div className={styles.siteheading}>
+              <h2>Inovation is Intrinsic </h2>
+              <h2>Inovation is Intrinsic </h2>
+              <h2>Inovation is Intrinsic </h2>
+            </div>
+          </div>
+        </div> 
 
       </main>
     </>
